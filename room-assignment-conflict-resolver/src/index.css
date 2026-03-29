@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-bg: #f8f9fa;
+  --color-brand-ink: #1a1a1a;
+  --color-brand-accent: #3b82f6;
+  --color-brand-danger: #ef4444;
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-muted: #6b7280;
+  --color-brand-border: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-brand-bg text-brand-ink;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-brand-border rounded-2xl shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-ink text-white px-6 py-2.5 rounded-xl font-medium hover:opacity-90 active:scale-95 transition-all flex items-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-brand-border px-6 py-2.5 rounded-xl font-medium hover:bg-brand-bg active:scale-95 transition-all flex items-center gap-2;
+  }
+}
