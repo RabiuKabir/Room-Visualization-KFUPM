@@ -1,5 +1,0 @@
-{
-  "name": "Room Assignment & Conflict Resolver",
-  "description": "A technical dashboard for managing course schedules, detecting room conflicts, and auto-resolving assignments.",
-  "requestFramePermissions": []
-}
